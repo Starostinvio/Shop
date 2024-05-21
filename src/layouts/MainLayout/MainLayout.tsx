@@ -17,15 +17,8 @@ const MainLayout: FC = () => {
   useEffect(() => {
     setLoading(true);
     headerRequest()
-      .then(() =>
-        createBasket()
-          .then(() => setLoading(false))
-          .catch(() => setLoading(false))
-      )
-      .catch((e) => {
-        setLoading(false);
-        throw new Error(e);
-      });
+      .then(() => createBasket().finally(() => setLoading(false)))
+      .finally(() => setLoading(false));
   }, []);
 
   return isLoading ? (
