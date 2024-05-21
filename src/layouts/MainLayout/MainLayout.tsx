@@ -33,7 +33,7 @@ const MainLayout: FC = () => {
   ) : (
     <div>
       <Header />
-      <div className="w-full min-h-[calc(100vh-88px)] bg-page-gradient">
+      <div className="w-full min-h-[calc(100vh-88px)] h-full bg-page-gradient">
         {header && <Outlet />}
       </div>
     </div>
