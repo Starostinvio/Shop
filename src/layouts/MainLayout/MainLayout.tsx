@@ -1,33 +1,13 @@
-import { FC, useEffect, useState } from "react";
+import { FC, PropsWithChildren } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "src/layouts/MainLayout/Header/Header";
-import LoadingPage from "src/modules/Loading/LoadingPage";
-import { useStore } from "src/store";
 
-const MainLayout: FC = () => {
-  const [isLoading, setLoading] = useState(false);
-  const { header, headerRequest, createBasket } = useStore(
-    ({ header, headerRequest, createBasket }) => ({
-      header,
-      headerRequest,
-      createBasket,
-    })
-  );
-
-  useEffect(() => {
-    setLoading(true);
-    headerRequest()
-      .then(() => createBasket().finally(() => setLoading(false)))
-      .finally(() => setLoading(false));
-  }, []);
-
-  return isLoading ? (
-    <LoadingPage />
-  ) : (
+const MainLayout: FC<PropsWithChildren> = ({ children }) => {
+  return (
     <div>
       <Header />
-      <div className="w-full min-h-[calc(100vh-88px)] h-full bg-page-gradient">
-        {header && <Outlet />}
+      <div className="w-full min-h-[calc(100vh-88px)] bg-page-gradient flex ">
+        {children || <Outlet />}
       </div>
     </div>
   );

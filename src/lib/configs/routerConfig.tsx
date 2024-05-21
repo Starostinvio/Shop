@@ -8,6 +8,7 @@ import MainLayout from "src/layouts/MainLayout/MainLayout";
 import LoadingPage from "src/modules/Loading/LoadingPage";
 
 import { ShoppingPage } from "src/modules/ShoppingCart";
+import PageNotFound from "src/modules/pageNotFound/PageNotFound";
 
 const RootPage = lazy(() => import("src/modules/Root/RootPage"));
 
@@ -21,6 +22,11 @@ const appRoutes: RouteObject[] = [
       <ProtectedRoute>
         <MainLayout />
       </ProtectedRoute>
+    ),
+    errorElement: (
+      <MainLayout>
+        <PageNotFound />
+      </MainLayout>
     ),
     children: [
       {

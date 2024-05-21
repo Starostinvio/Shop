@@ -98,7 +98,7 @@ const ShoppingCartPage = () => {
   );
 
   return (
-    <div className="max-w-[1280px]  my-0 mx-auto flex flex-col justify-center flex-wrap">
+    <div className="max-w-[1280px]  my-0 mx-auto flex flex-col justify-start flex-wrap">
       {isLoading && (
         <div className="fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center">
           <Spinner />
