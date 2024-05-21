@@ -34,30 +34,6 @@ const Dropdown: FC<DropdownProps> = ({ buttonTitle, children }) => {
           className="mt-[8px] z-[1000] flex flex-col divide-y divide-white/5 rounded-xl bg-white/5 text-sm/6 "
         >
           {children}
-          {/* <a
-            href="#"
-            className="block rounded-lg py-2 px-3 transition hover:bg-white/5"
-          >
-            <p className="font-semibold text-white">YouTube</p>
-          </a>
-          <a
-            href="#"
-            className="block rounded-lg py-2 px-3 transition hover:bg-white/5"
-          >
-            <p className="font-semibold text-white">Yandex</p>
-          </a>
-          <a
-            href="#"
-            className="block rounded-lg py-2 px-3 transition hover:bg-white/5"
-          >
-            <p className="font-semibold text-white">Google</p>
-          </a>
-          <a
-            href="#"
-            className="block rounded-lg py-2 px-3 transition hover:bg-white/5"
-          >
-            <p className="font-semibold text-white">Банк Банковский</p>
-          </a> */}
         </PopoverPanel>
       </Transition>
     </Popover>

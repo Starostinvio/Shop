@@ -1,6 +1,6 @@
 export const dropdownTitle = [
   { title: "YouTube", path: "#" },
-  { title: "Ynadex", path: "#" },
+  { title: "Yandex", path: "#" },
   { title: "Spotify", path: "#" },
   { title: "Банк Банковский", path: "#" },
 ];
